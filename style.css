@@ -1,0 +1,12 @@
+html {
+    --text: #ffffff;
+    --background: #2130ff;
+    --primary: #27c7e3;
+    --secondary: #27c7e3;
+    --accent: #27c7e3;
+}
+
+body {
+    color: var(--text);
+    background: var(--background);
+}
