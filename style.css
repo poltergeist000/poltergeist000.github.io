@@ -9,4 +9,5 @@ html {
 body {
     color: var(--text);
     background: var(--background);
+    font-family: "Roboto"
 }
