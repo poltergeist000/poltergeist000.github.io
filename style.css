@@ -3,7 +3,15 @@ html {
     --background: #2130ff;
     --primary: #27c7e3;
     --secondary: #27c7e3;
-    --accent: #27c7e3;
+    --accent: #bcbcbc;
+}
+
+h2 {
+    border: solid var(--primary);
+}
+
+audio {
+    border: solid var(--accent);
 }
 
 body {
