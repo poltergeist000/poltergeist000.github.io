@@ -6,6 +6,14 @@ html {
     --accent: #bcbcbc;
 }
 
+ a:link {
+      color: #27c7e3; /* Or any other color value like #0000FF, rgb(0,0,255) */
+    }
+
+ a:visited {
+      color: #a4f1ff;
+    }
+
 h2 {
     border: solid var(--primary);
 }
