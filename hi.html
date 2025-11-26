@@ -94,6 +94,13 @@
         // TODO: Update the background color of colorOutput whenever the color input changes.
         // Challenge: Also display the hex code and volume value dynamically.
 
+        function updateColorAndVolumeDisplay() {
+            const hexCode = colorInput.value;
+            const volume = volumeInput.value;
+            colorOutput.style.backgroundColor = hexCode;
+            colorOutput.textContent = `Color: ${hexCode} | Volume: ${volume}`;
+        }
+
         // --- PART 3 ---
         const subscribeBox = document.getElementById("subscribeBox");
         const btnSubmit = document.getElementById("btnSubmit");
@@ -102,6 +109,8 @@
         btnSubmit.addEventListener("click", () => {
             // TODO: Find which radio button is checked and display it.
             // Challenge: Include whether the user subscribed or not.
+        
+
         });
     </script>
 </body>
