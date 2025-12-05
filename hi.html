@@ -90,7 +90,7 @@
         const colorInput = document.getElementById("colorInput");
         const volumeInput = document.getElementById("volumeInput");
         const colorOutput = document.getElementById("colorOutput");
-
+        colorOutput.textContent = "he"
         // TODO: Update the background color of colorOutput whenever the color input changes.
         // Challenge: Also display the hex code and volume value dynamically.
 
@@ -99,7 +99,7 @@
             const volume = volumeInput.value;
             colorOutput.style.backgroundColor = hexCode;
         }
-
+        colorInput.addEventListener("input", updateColorAndVolumeDisplay)
         // --- PART 3 ---
         const subscribeBox = document.getElementById("subscribeBox");
         const btnSubmit = document.getElementById("btnSubmit");
