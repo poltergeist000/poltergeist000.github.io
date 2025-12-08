@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        section {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        button {
+            margin-top: 1rem;
+        }
+
+        .output {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The Best Most Coolest Widget Ever</h1>
+
+    <section id="main">
+        <h2>Background Color Picker</h2>
+        <label>
+            Choose Color:
+            <input id="colorInput" type="color" value="#00AAFF">
+        </label>
+        <label>
+            Text Size:
+            <input id="volumeInput" type="range" min="0" max="100" value="50">
+        </label>
+        <label>
+            Boldness:
+            <input id="volumeInput" type="range" min="0" max="100" value="50">
+        </label>
+        <p>Pick a Font:</p>
+        <label><input type="radio" name="mode" value="Light"> Helvetica</label>
+        <label><input type="radio" name="mode" value="Dark"> Times New Roman</label>
+        <label><input type="radio" name="mode" value="System" checked> Sans Serif</label>
+    </section>
+
+
+    <script>
+        // --- PART 1 ---
+        const nameInput = document.getElementById("nameInput");
+        const ageInput = document.getElementById("ageInput");
+        const btnGreet = document.getElementById("btnGreet");
+        const greetingOutput = document.getElementById("greetingOutput");
+
+        btnGreet.addEventListener("click", () => {
+            // TODO: Display a message like "Hello NAME, you are AGE years old!"
+            // Challenge: If age < 13, show "You're just a kid!" instead.
+            greetingOutput.textContent = "wow " + nameInput.value + ", you are " + ageInput.value + " years old!"
+        });
+
+        // --- PART 2 ---
+        const colorInput = document.getElementById("colorInput");
+        const volumeInput = document.getElementById("volumeInput");
+        const colorOutput = document.getElementById("colorOutput");
+        colorOutput.textContent = "he"
+        // TODO: Update the background color of colorOutput whenever the color input changes.
+        // Challenge: Also display the hex code and volume value dynamically.
+
+        function updateColorAndVolumeDisplay() {
+            const hexCode = colorInput.value;
+            const volume = volumeInput.value;
+            colorOutput.style.backgroundColor = hexCode;
+        }
+        colorInput.addEventListener("input", updateColorAndVolumeDisplay)
+        // --- PART 3 ---
+        const subscribeBox = document.getElementById("subscribeBox");
+        const btnSubmit = document.getElementById("btnSubmit");
+        const modeOutput = document.getElementById("modeOutput");
+
+        btnSubmit.addEventListener("click", () => {
+            // TODO: Find which radio button is checked and display it.
+            // Challenge: Include whether the user subscribed or not.
+        
+
+        });
+    </script>
+</body>
+
+</html>
