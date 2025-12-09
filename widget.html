@@ -60,7 +60,8 @@
     <script>
         // --- PART 2 ---
         const colorInput = document.getElementById("colorInput");
-        const volumeInput = document.getElementById("volumeInput");
+        const sizeInput = document.getElementById("sizeInput");
+        const boldInput = document.getElementById("boldInput");
         const colorOutput = document.getElementById("colorOutput");
         colorOutput.textContent = "he"
         // TODO: Update the background color of colorOutput whenever the color input changes.
@@ -70,6 +71,8 @@
             const hexCode = colorInput.value;
             const volume = volumeInput.value;
             document.body.style.backgroundColor = hexCode;
+            document.body.style.fontSize = 
+            document.body.style.fontWeight = 
         }
         colorInput.addEventListener("input", updateColorAndVolumeDisplay)
         // --- PART 3 ---
