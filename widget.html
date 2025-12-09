@@ -39,36 +39,25 @@
         <h2>Background Color Picker</h2>
         <label>
             Choose Color:
-            <input id="colorInput" type="color" value="#00AAFF">
+            <input id="colorInput" type="color" value="#2130ff">
         </label>
         <label>
             Text Size:
-            <input id="volumeInput" type="range" min="0" max="100" value="50">
+            <input id="sizeInput" type="range" min="0" max="100" value="50">
         </label>
         <label>
             Boldness:
-            <input id="volumeInput" type="range" min="0" max="100" value="50">
+            <input id="boldInput" type="range" min="0" max="100" value="50">
         </label>
         <p>Pick a Font:</p>
-        <label><input type="radio" name="mode" value="Light"> Helvetica</label>
-        <label><input type="radio" name="mode" value="Dark"> Times New Roman</label>
-        <label><input type="radio" name="mode" value="System" checked> Sans Serif</label>
+        <label><input type="radio" name="mode" value="Helvetica" checked> Helvetica</label>
+        <label><input type="radio" name="mode" value="Times New Roman"> Times New Roman</label>
+        <label><input type="radio" name="mode" value="Sans Serif"> Sans Serif</label>
+        <button id="btnSubmit">Submit</button>
     </section>
 
 
     <script>
-        // --- PART 1 ---
-        const nameInput = document.getElementById("nameInput");
-        const ageInput = document.getElementById("ageInput");
-        const btnGreet = document.getElementById("btnGreet");
-        const greetingOutput = document.getElementById("greetingOutput");
-
-        btnGreet.addEventListener("click", () => {
-            // TODO: Display a message like "Hello NAME, you are AGE years old!"
-            // Challenge: If age < 13, show "You're just a kid!" instead.
-            greetingOutput.textContent = "wow " + nameInput.value + ", you are " + ageInput.value + " years old!"
-        });
-
         // --- PART 2 ---
         const colorInput = document.getElementById("colorInput");
         const volumeInput = document.getElementById("volumeInput");
@@ -80,7 +69,7 @@
         function updateColorAndVolumeDisplay() {
             const hexCode = colorInput.value;
             const volume = volumeInput.value;
-            colorOutput.style.backgroundColor = hexCode;
+            document.body.style.backgroundColor = hexCode;
         }
         colorInput.addEventListener("input", updateColorAndVolumeDisplay)
         // --- PART 3 ---
