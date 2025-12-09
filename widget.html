@@ -69,10 +69,11 @@
 
         function updateColorAndVolumeDisplay() {
             const hexCode = colorInput.value;
-            const volume = volumeInput.value;
+            const textsize = sizeInput.value;
+            const boldtext = boldInput.value;
             document.body.style.backgroundColor = hexCode;
-            document.body.style.fontSize = 
-            document.body.style.fontWeight = 
+            document.body.style.fontSize = textsize;
+            document.body.style.fontWeight = boldtext;
         }
         colorInput.addEventListener("input", updateColorAndVolumeDisplay)
         // --- PART 3 ---
