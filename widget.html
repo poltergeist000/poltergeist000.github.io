@@ -41,29 +41,23 @@
             Choose Color:
             <input id="colorInput" type="color" value="#2130ff">
         </label>
+        <h2>Customize Text</h2>
         <label>
             Text Size:
-            <input id="sizeInput" type="range" min="0" max="100" value="50">
+            <input id="sizeInput" type="range" min="0" max="60" value="16">
         </label>
         <label>
             Boldness:
-            <input id="boldInput" type="range" min="0" max="100" value="50">
+            <input id="boldInput" type="range" min="100" max="900" value="500" step="100">
         </label>
-        <p>Pick a Font:</p>
-        <label><input type="radio" name="mode" value="Helvetica" checked> Helvetica</label>
-        <label><input type="radio" name="mode" value="Times New Roman"> Times New Roman</label>
-        <label><input type="radio" name="mode" value="Sans Serif"> Sans Serif</label>
-        <button id="btnSubmit">Submit</button>
     </section>
-
+    <a href="index.html">Return Home</a>
 
     <script>
         // --- PART 2 ---
         const colorInput = document.getElementById("colorInput");
         const sizeInput = document.getElementById("sizeInput");
         const boldInput = document.getElementById("boldInput");
-        const colorOutput = document.getElementById("colorOutput");
-        colorOutput.textContent = "he"
         // TODO: Update the background color of colorOutput whenever the color input changes.
         // Challenge: Also display the hex code and volume value dynamically.
 
@@ -72,21 +66,12 @@
             const textsize = sizeInput.value;
             const boldtext = boldInput.value;
             document.body.style.backgroundColor = hexCode;
-            document.body.style.fontSize = textsize;
+            document.body.style.fontSize = textsize + "px";
             document.body.style.fontWeight = boldtext;
         }
         colorInput.addEventListener("input", updateColorAndVolumeDisplay)
-        // --- PART 3 ---
-        const subscribeBox = document.getElementById("subscribeBox");
-        const btnSubmit = document.getElementById("btnSubmit");
-        const modeOutput = document.getElementById("modeOutput");
-
-        btnSubmit.addEventListener("click", () => {
-            // TODO: Find which radio button is checked and display it.
-            // Challenge: Include whether the user subscribed or not.
-        
-
-        });
+        sizeInput.addEventListener("input", updateColorAndVolumeDisplay)
+        boldInput.addEventListener("input", updateColorAndVolumeDisplay)
     </script>
 </body>
 
